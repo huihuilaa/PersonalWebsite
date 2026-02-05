@@ -108,9 +108,12 @@ document.addEventListener('click', (e) => {
     }
 
     // Contact Modal
-    if (target.dataset.type) {
-        const type = target.dataset.type;
+    if (target.dataset.type || target.closest('[data-type]')) {
+        const el = target.dataset.type ? target : target.closest('[data-type]');
+        const type = el.dataset.type;
+        
         if (urls[type]) {
+            e.preventDefault();
             iframes.link.src = urls[type];
             modals.link.style.display = "block";
         }
