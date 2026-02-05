@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="module" src="./js/script.js"></script>
+
+</head>
+<body>
+
+    <!-- Music Player -->
+
+    <audio id="musicPlayer" preload="metadata">
+    <source src="./music/しゃぼんだま.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="wrapper">
+
+        <!-- Start Navbar -->
+
+        <header class="header">
+            <div class="navbar">
+                <div class="container">
+
+                    <ul class="nav">
+
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link">關於自己</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#works" class="nav-link">我的作品</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#playlist" class="nav-link">播放清單</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#movies" class="nav-link">最愛影集</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#contact" class="nav-link">聯繫方式</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- End Navbar -->
+
+        <!-- Start Main -->
+
+        <section class="main">
+            
+            <!-- Start Jumpbotron -->
+
+            <div class="jumpbotron">
+                <div class="full-width-container">
+
+                    <div class="jumpbotron-image">
+
+                        <img src="./images/jumpbotron.png" alt="jumpbotron image">
+
+                    </div>
+
+                    <div class="intro-text">
+
+                        <h1>歡迎來到<br>我的數位小天地</h1>
+                        <p>這裡記錄了我的創作、喜歡的事物、作品、以及我的生活</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- End Jumpbotron -->
+
+            <!-- Start Section 1 -->
+
+            <div id="about" class="hero section-color-yellow">
+                <div class="container">
+
+                    <h2 class="section-title">關於自己</h2>
+
+                    <!-- Cmpt 1 -->
+
+                    <div class="cmpt-1">
+                        
+                        <div class="row">
+                            <div class="col-1-2">
+                                <h3>個人資料</h3>
+                                <p>我是鄭聖煇，目前是就讀資訊工程學系的學生，對於程式有很高的興趣，也一直在持續學習</p>
+                            </div>
+
+                            <div class="col-1-2">
+                                <div class="picture">
+                                    <img src="./images/selfie.png" class="selfie"></div>
+                                </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Cmpt 2 -->
+
+                     <div class="cmpt-2">
+                        <div class="row">
+
+                            <div class="col-1-2">
+                                <div class="picture"><img src="./images/interest.png" class="interest_ss"></div>
+                            </div>
+
+                            <div class="col-1-2">
+                                <h3>興趣</h3>
+                                <p>平常的興趣是玩遊戲跟聽音樂，偶爾在 Discord 上面寫一些機器人的小程式，也會跟朋友一起測試和開發機器人</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- End Section 1 -->
+
+            <!-- Start Section 2 -->
+
+            <div id="works" class="hero section-color-gray">
+                <div class="container">
+
+                    <h2 class="section-title">我的作品</h2>
+
+                    <div class="row">
+
+                        <div class="col-1-2">
+                            <div class="card-1-2">
+                                <img src="./images/work1.png" alt="作品一圖片">
+                                <h3>作品一</h3>
+                                <p>這是我在大一，按照老師的課程需求，利用AI做出來的Discord機器人，這個機器人上有很多基本Discord機器人上面會有的指令。</p>
+                            </div>
+                        </div>
+
+                        <div class="col-1-2">
+                            <div class="card-1-2">
+                                <img src="./images/work2.png" alt="作品二圖片">
+                                <h3>作品二</h3>
+                                <p>這是我在大二的時候，跟朋友在課堂上做的期末專題，學生模擬器，模擬學生每天會做的事情，供玩家自行選擇，各個選項都有可能導致不同的結局。</p>
+                            </div>       
+                        </div>
+                            
+                    </div>
+                </div>
+             </div>
+
+            <!-- End Section 2 -->
+
+            <!-- Start Section 3 -->
+
+            <div id="playlist" class="hero section-color-yellow">
+                <div class="container">
+                    <h2 class="section-title">播放清單</h2>
+
+                    <div class="music-player-row">
+                        <div class="music-album-cover">
+                            <img src="./images/album.png" alt="Bubblin Album">
+                        </div>
+
+                        <div class="music-player-content">
+                            <h3 class="music-name">しゃぼんだま</h3>
+                            <p class="music-artist">HIMEHINA</p>
+                            <p class="music-album-title">HIMEHINA 4th ALBUM 『Bubblin』</p>
+                            
+                            <div class="music-progress-area">
+                                <div class="music-progress-track">
+                                    <div class="music-progress-dot"></div>
+                                </div>
+                                <div class="music-time">00:00 / 02:48</div>
+                            </div>
+
+                            <div class="music-controls">
+                                <div id="playBtn" class="btn-circle">▶</div>
+                                <div class="capsule-container">
+                                    <span class="sub-btn prev-btn">⏮</span>
+                                    <span class="sub-btn next-btn">⏭</span>
+                                </div>
+                            </div>
+
+                            <p class="music-next-song">下一首：Lady Crazy</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- End Section 3 -->
+
+            <!-- Start Section 4 -->
+
+            <div id="movies" class="hero section_color_gray">
+
+                <div class="container">
+                    <h2 class="section-title">喜歡的電影/影集</h2>
+
+                    <div class="row row-collapse">
+                        <div class="col-1-3">
+                            <h3 class="movie-name">黑白大廚</h3>
+
+                            <div class="card-1-3">
+                                <img src="./images/movie1.png" alt="黑白大廚">
+                            </div>
+
+                        </div>
+
+                        <div class="col-1-3">
+                            <h3 class="movie-name">KPOP 獵魔女團</h3>
+
+                            <div class="card-1-3">
+                                <img src="./images/movie2.png" alt="KPOP 獵魔女團">
+                            </div>
+
+                        </div>
+                        <div class="col-1-3">
+                            <h3 class="movie-name">藥師少女的獨語</h3>
+
+                            <div class="card-1-3">
+                                <img src="./images/movie3.png" alt="藥師少女的獨語">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- End Section 4 -->
+
+        </section>
+
+        <!-- End Main -->
+
+        <!-- Start Footer -->
+
+        <footer id="contact" class="footer">
+            <div class="container container-footer">
+
+                <h2 class="footer-title">聯絡我</h2>
+                <p class="footer-text">
+                    有任何的問題或是想要了解的部分<br>
+                    歡迎透過以下的聯絡方式聯繫我
+                </p>
+                
+                <div class="social-links">
+
+                    <a href="https://github.com/huihuilaa" class="social-icon" target="_blank">
+                        <img src="./images/Github.png" alt="Github">
+                    </a>
+
+                    <a href="https://www.facebook.com/huihuilaa" class="social-icon" target="_blank">
+                        <img src="./images/Facebook.png" alt="Facebook">
+                    </a>
+
+                    <a href="https://www.instagram.com/huihuilaa" class="social-icon" target="_blank">
+                        <img src="./images/Instagram.png" alt="Instagram">
+                    </a>
+
+                </div>
+
+                <div class="form-section">
+
+                    <div class="footer-line"></div>
+
+                    <a href="#" class="form-btn" data-type="form">
+                        <img src="./images/GoogleForm.png" alt="Form">
+                    </a>
+
+                </div>
+            </div>
+        </footer>
+
+        <!-- End Footer -->
+
+        <!-- Start Modal -->
+
+        <div id="videoModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <div class="video-container">
+                    <iframe id="youtubePlayer" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div id="workModal" class="modal">
+            <div class="modal-content">
+                <span class="close-work-btn">&times;</span>
+                <div class="work-detail-container">
+                    <iframe id="workPDFViewer" src="" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div id="linkModal" class="modal">
+            <div class="modal-content">
+                <span class="close-link-btn">&times;</span>
+                <div class="link-detail-container">
+                    <iframe id="linkViewer" src="" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- End Modal -->
+
+        <!-- Start BTT Button -->
+
+        <a href="#top" class="back-to-top">▲</a>
+
+        <!-- End BTT Button -->
+</body>
+</html>

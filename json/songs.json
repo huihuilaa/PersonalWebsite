@@ -1,0 +1,77 @@
+[
+  {
+    "title": "しゃぼんだま",
+    "source": "./musics/Fragile_Life.mp3",
+    "next": "Lady Crazy"
+  },
+  {
+    "title": "Lady Crazy",
+    "source": "./musics/Lady_Crazy.mp3",
+    "next": "V"
+  },
+  {
+    "title": "V",
+    "source": "./musics/V.mp3",
+    "next": "愛包ダンスホール"
+  },
+  {
+    "title": "愛包ダンスホール",
+    "source": "./musics/Heart_Pie_Dancehall.mp3",
+    "next": "バブリン"
+  },
+  {
+    "title": "バブリン",
+    "source": "./musics/Bubblin.mp3",
+    "next": "キスキツネ"
+  },
+  {
+    "title": "キスキツネ",
+    "source": "./musics/Kiss_Kitsune.mp3",
+    "next": "マザードラッグ"
+  },
+  {
+    "title": "マザードラッグ",
+    "source": "./musics/Mother_Drug.mp3",
+    "next": "絶望を翔る恒星"
+  },
+  {
+    "title": "絶望を翔る恒星",
+    "source": "./musics/Star_continue_to_fly_in_despair.mp3",
+    "next": "密命"
+  },
+  {
+    "title": "密命",
+    "source": "./musics/Rightous_decree.mp3",
+    "next": "魂にひそむ"
+  },
+  {
+    "title": "魂にひそむ",
+    "source": "./musics/Soul_Abyss.mp3",
+    "next": "遺言"
+  },
+  {
+    "title": "遺言",
+    "source": "./musics/The_Last_Wish.mp3",
+    "next": "Lemonade"
+  },
+  {
+    "title": "Lemonade",
+    "source": "./musics/Lemonade.mp3",
+    "next": "風編み鳥"
+  },
+  {
+    "title": "風編み鳥",
+    "source": "./musics/Windweaver.mp3",
+    "next": "涙の薫りがする"
+  },
+  {
+    "title": "涙の薫りがする",
+    "source": "./musics/Tears.mp3",
+    "next": "生と詩"
+  },
+  {
+    "title": "生と詩",
+    "source": "./musics/White_Dwarf.mp3",
+    "next": "しゃぼんだま"
+  }
+]
