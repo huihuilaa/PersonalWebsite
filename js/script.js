@@ -2,8 +2,7 @@ import songs from '../json/songs.json' with { type: 'json' };
 import movies from '../json/movies.json' with { type: 'json' };
 import works from '../json/works.json' with { type: 'json' };
 import urls from '../json/urls.json' with { type: 'json' };
-    
-const navbar = document.querySelector('.navbar');
+
 const audio = document.getElementById('musicPlayer');
 const playBtn = document.getElementById('playBtn');
 const musicName = document.querySelector('.music-name');
@@ -42,12 +41,14 @@ const loadSong = (index) => {
 };
 
 // Initialize Music Player
+
 if (audio) {
     audio.volume = 0.3;
     loadSong(songIndex);
 }
 
 // Play Control
+
 playBtn?.addEventListener('click', () => {
     if (audio.paused) {
         audio.play();
@@ -68,6 +69,7 @@ document.addEventListener('click', (e) => {
     const target = e.target;
 
     // Smooth Scroll
+
     if (target.classList.contains('nav-link')) {
         e.preventDefault();
         const targetEl = document.querySelector(target.getAttribute('href'));
@@ -75,6 +77,7 @@ document.addEventListener('click', (e) => {
     }
 
     // Song Switch
+
     if (target.closest('.next-btn')) {
         songIndex = (songIndex + 1) % songs.length;
         loadSong(songIndex);
@@ -90,6 +93,7 @@ document.addEventListener('click', (e) => {
     }
 
     // Movies Modal
+
     if (target.closest('.card-1-3')) {
         const movieName = target.closest('.card-1-3').parentElement.querySelector('.movie-name').innerText.trim();
         if (movies[movieName]) {
@@ -99,6 +103,7 @@ document.addEventListener('click', (e) => {
     }
 
     // Works Modal
+
     if (target.closest('.card-1-2 img')) {
         const title = target.closest('.card-1-2').querySelector('h3').innerText.trim();
         if (works[title]) {
@@ -108,6 +113,7 @@ document.addEventListener('click', (e) => {
     }
 
     // Contact Modal
+
     if (target.dataset.type || target.closest('[data-type]')) {
         const el = target.dataset.type ? target : target.closest('[data-type]');
         const type = el.dataset.type;
@@ -119,7 +125,8 @@ document.addEventListener('click', (e) => {
         }
     }
 
-    // Closing
+    // Close Modal
+
     if (target.classList.contains('modal') || target.closest('[class*="close-"]')) {
         const activeModal = target.closest('.modal');
         if (activeModal) {
