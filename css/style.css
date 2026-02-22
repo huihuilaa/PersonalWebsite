@@ -12,11 +12,16 @@ html, body {
     scroll-behavior: smooth;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .container {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1400px; 
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 20px;   
 }
 
 /* Navbar */
@@ -27,14 +32,10 @@ html, body {
     height: 100px;
     width: 100%;
     display: flex;
-    align-items: center
-}
-
-.nav-link {
-    text-decoration: none;
-    color: white;
-    font-size: 25px;
-    font-weight: bold;
+    align-items: center;
+    position: fixed; 
+    top: 0;
+    z-index: 1000;
 }
 
 .nav {
@@ -45,6 +46,63 @@ html, body {
     padding: 0;
     width: 100%;
     gap: 150px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 1024px) {
+    .menu-toggle {
+        display: flex; 
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .nav {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background-color: #7a7a7a;
+        gap: 0;
+    }
+
+    .nav.active {
+        display: flex; 
+    }
+
+    .nav-item {
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #888;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 20px 0;
+    }
 }
 
 /* Jumbotron */
@@ -92,6 +150,51 @@ html, body {
     font-size: 1.1vw;
 }
 
+@media screen and (max-width: 1024px) {
+    .jumpbotron {
+        height: auto;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 60px 0;
+    }
+
+    .full-width-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .jumpbotron-image {
+        flex: 0 0 auto;
+        width: 300px;
+        max-width: 80%;
+        margin-bottom: 40px;
+        margin-right: 0;
+        margin-left: 120px;
+    }
+
+    .intro-text {
+        flex: 0 0 auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    .intro-text h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .intro-text p {
+        font-size: 18px;
+        text-align: center;
+        padding: 0 10%;
+    }
+}
+
 /* Section color */
 
 .section-color-yellow {
@@ -110,8 +213,16 @@ html, body {
     margin-top: 0;
 }
 
-.cmpt-1 .row {
+.cmpt-1 .row, .cmpt-2 .row {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.cmpt-2 .col-1-2:first-child {
+    flex: 0 0 500px;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .cmpt-1 .col-1-2:last-child {
@@ -121,14 +232,15 @@ html, body {
     justify-content: flex-end;
 }
 
-.selfie {
+.selfie, .interest_ss {
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 20px;
 }
 
 .col-1-2 {
-    width: 50%;
+    width: 45%;
 }
 
 .col-1-2 h3 {
@@ -139,36 +251,112 @@ html, body {
     font-size: 30px;
 }
 
+@media screen and (max-width: 1024px) {
+    .cmpt-1 .row, .cmpt-2 .row {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .col-1-2 {
+        width: 100%;
+    }
+
+    .cmpt-1 .col-1-2:last-child, .cmpt-2 .col-1-2:first-child {
+        margin: 0 auto;
+        flex: 0 0 auto;
+        justify-content: center;
+        width: 80%;
+    }
+
+    .cmpt-2 .row {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .cmpt-2 .col-1-2:first-child {
+        order: 2;
+    }
+    .cmpt-2 .col-1-2:last-child {
+        order: 1;
+    }
+
+    .section-title {
+        font-size: 50px;
+    }
+
+    .col-1-2 h3 {
+        font-size: 40px;
+    }
+
+    .col-1-2 p {
+        font-size: 22px;
+    }
+}
+
 /* Section 2 */
+
+#works .container {
+    width: 100%;
+    max-width: 1400px;
+    display: block;
+}
+
+#works .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 40px;
+    width: 100%;
+}
+
+#works .col-1-2 {
+    flex: 0 0 550px;
+    width: 550px;
+    display: flex;
+}
 
 .card-1-2 {
     background-color: white;
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    width: 550px;
-    height: auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
+
 .card-1-2 img {
     cursor: pointer;
-    max-width: 100%;
+    width: 100%;
+    max-width: 490px;
     height: auto;
     border-radius: 10px;
     margin-bottom: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
-.card-1-2 img:hover {
-    transform: scale(1.03); 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+@media screen and (max-width: 1200px) {
+    #works .row {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    #works .col-1-2 {
+        flex: 0 1 auto;
+        width: 100%;
+        max-width: 550px;
+        margin-bottom: 30px;
+    }
 }
 
-/* Section 3*/
+/* Section 3 */
 
 .music-player-row {
     display: flex;
@@ -293,6 +481,43 @@ html, body {
     font-size: 30px;
 }
 
+@media screen and (max-width: 1200px) {
+    .music-player-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .music-album-cover img {
+        width: 320px;
+        height: 320px;
+    }
+
+    .music-player-content {
+        flex: 0 0 auto;
+        width: 90%;
+        max-width: 500px;
+        text-align: center;
+    }
+
+    .music-name {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .music-artist, .music-album-title, .music-next-song {
+        font-size: 22px;
+    }
+
+    .music-controls {
+        justify-content: center;
+    }
+
+    .music-progress-area {
+        margin-top: 40px;
+    }
+}
+
 /* Section 4 */
 
 .section-color-gray .container {
@@ -307,6 +532,7 @@ html, body {
     align-items: flex-start;
     gap: 40px;
     width: 100%;
+    flex-wrap: nowrap; 
 }
 
 .col-1-3 {
@@ -340,10 +566,25 @@ html, body {
     box-shadow: 0 15px 40px rgba(0,0,0,0.3);
 }
 
+@media screen and (max-width: 1200px) {
+    .row-collapse {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
+    .col-1-3 {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
 /* footer */
 
 .container-footer {
-    height: 500px;
+    height: 600px;
 }
 
 .footer {
@@ -579,76 +820,4 @@ html, body {
     font-weight: bold;
     cursor: pointer;
     line-height: 1;
-}
-
-/* RWD */
-
-@media screen and (max-width: 1024px) 
-{
-    .nav 
-    {
-        gap: 30px; 
-    }
-    
-    .full-width-container 
-    {
-        padding: 0 5vw;
-    }
-    .intro-text h1 
-    {
-        font-size: 6vw;
-    }
-}
-
-@media screen and (max-width: 768px) 
-{
-
-    .nav 
-    {
-        flex-wrap: wrap;
-        gap: 15px;
-        justify-content: center;
-    }
-
-    .navbar 
-    {
-        height: auto;
-        padding: 20px 0;
-    }
-
-    .row, .full-width-container, .music-player-row, .row-collapse 
-    {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .col-1-2, .col-1-3, .card-1-2, .card-1-3 
-    {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .cmpt-1 .col-1-2:last-child 
-    {
-        flex: 0 0 auto;
-        justify-content: center;
-        margin-left: 0;
-    }
-
-    .music-album-cover img 
-    {
-        width: 100%;
-        height: auto;
-    }
-    .music-player-content 
-    {
-        flex: 0 0 auto;
-        width: 100%;
-    }
-
-    .section-title 
-    {
-        font-size: 40px;
-    }
 }

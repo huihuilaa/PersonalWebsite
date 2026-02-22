@@ -9,6 +9,7 @@ const musicName = document.querySelector('.music-name');
 const nextSongText = document.querySelector('.music-next-song');
 const progressDot = document.querySelector('.music-progress-dot');
 const timeDisplay = document.querySelector('.music-time');
+const navList = document.querySelector('.nav');
 
 
 const modals = {
@@ -68,16 +69,21 @@ audio.addEventListener('timeupdate', () => {
 document.addEventListener('click', (e) => {
     const target = e.target;
 
-    // Smooth Scroll
+    // Hamburger Menu Control
+    if (target.closest('#mobile-menu')) {
+        navList.classList.toggle('active');
+    }
 
+    // Smooth Scroll & Auto Close Menu
     if (target.classList.contains('nav-link')) {
         e.preventDefault();
+        navList.classList.remove('active');
         const targetEl = document.querySelector(target.getAttribute('href'));
-        if (targetEl) window.scrollTo({ top: targetEl.offsetTop + 100, behavior: 'smooth' });
+        if (targetEl) window.scrollTo({ top: targetEl.offsetTop - 100, behavior: 'smooth' });
     }
 
     // Song Switch
-
+    
     if (target.closest('.next-btn')) {
         songIndex = (songIndex + 1) % songs.length;
         loadSong(songIndex);
